@@ -51,7 +51,7 @@ jobs:
 
       - name: Upload Artifact - Allure Report
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: allureReport
           path: |
@@ -60,23 +60,23 @@ jobs:
 
       - name: Upload Artifact - Logs
         if: always()
-          uses: actions/upload-artifact@v2
-          with:
-            name: Logs
-            path: |
-              target/logger.log
-            retention-days: 14
+        uses: actions/upload-artifact@v3
+        with:
+          name: Logs
+          path: |
+            target/logger.log
+          retention-days: 14
 
       - name: Upload Artifact - Specs Results
         if: always()
-          uses: actions/upload-artifact@v2
-          with:
-            name: specsResults
-            path: |
-              allure-report
-              target/logger.log
-              target/specs
-            retention-days: 14
+        uses: actions/upload-artifact@v3
+        with:
+          name: specsResults
+          path: |
+            allure-report
+            target/logger.log
+            target/specs
+          retention-days: 14
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
