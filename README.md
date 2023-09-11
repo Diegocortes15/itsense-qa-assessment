@@ -1,4 +1,4 @@
-# Selenium Automation Framework Saucedemo
+# IT Sense QA Assessment
 
 ## Dependencies used
 
@@ -60,7 +60,7 @@ Installed:
 git clone https://github.com/Diegocortes15/itsense-qa-assessment.git
 ```
 
-![image](https://user-images.githubusercontent.com/60171460/215863587-4ee3772f-78ca-4320-ba45-50d281baec33.png)
+![image](https://github.com/Diegocortes15/itsense-qa-assessment/assets/60171460/7bd79a83-24d4-477d-b118-21b259d8d5c7)
 
 ## Run project ⚠
 
@@ -90,6 +90,23 @@ Then in another terminal you must use the following container to run our tests
 mvn clean verify
 ```
 
+### Remote ⚠
+> **Note**
+> You need [Docker](https://docs.docker.com/get-docker/) installed on your machine to run the following commands!
+
+To run the project remotely you make sure that in ```App Class``` the ```PLATFORM``` variable must be set as ```remote```
+then you must run the docker container with the following command
+
+```bash
+docker-compose -f docker/docker-compose.yml up
+```
+
+Then in another terminal you must use the following container to run our tests
+
+```bash
+mvn clean verify
+```
+
 Once our tests have finished you must run the following command to stop our docker container
 
 ```bash
@@ -104,4 +121,12 @@ To open allure report run the following command
 allure serve target/allure-results
 ```
 
-![Animation 5 (1)](https://user-images.githubusercontent.com/60171460/215867864-3ec22fc7-46e5-4aca-8112-03ffcc8f6867.gif)
+![isAssessment](https://github.com/Diegocortes15/itsense-qa-assessment/assets/60171460/936be48a-5475-4ed2-b115-30d1a80aacd4)
+
+## Open Artifacts
+
+In our Github Actions or Azure DevOps you can see some details where you can find artifacts related with the test execution
+
+1. Allure Report (Remember open it with a server like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
+2. Specs (Here you can find the text scraped from the header tag)
+3. Logs (Information related with test execution)
