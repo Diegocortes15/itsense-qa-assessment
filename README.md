@@ -2,10 +2,9 @@
 
 ## Dependencies used
 
-- Selenium
-- WebDriverManager
+- Selenium 4
 - TestNG
-- Log4J
+- Log4J2
 - Allure
 - JsonSimple
 
@@ -14,6 +13,7 @@
 - [JDK 11](https://www.oracle.com/co/java/technologies/javase/jdk11-archive-downloads.html) (Environment variable)
 - [Maven](https://maven.apache.org/download.cgi) (Environment variable)
 - [Allure](https://docs.qameta.io/allure-report/#_installing_a_commandline) (Environment variable)
+- [Docker](https://docs.docker.com/get-docker/) (Optional if you want to run remotely)
 - IDE (ex. [IntelliJ](https://www.jetbrains.com/idea/download/#section=windows))
 
 ### How set environment variables
@@ -51,23 +51,49 @@ Installed:
 3. Extract the .zip file with the **Extract here** option
 4. Place the project folder on the desired location
 
-### Workaround 2 - Gitbash
+### Workaround 2 - Git-bash
 
 1. Select the folder when you would like clone the project
-2. Open gitbash, copy and paste the following command
+2. Open git bash, copy and paste the following command
 
 ```bash
-git clone https://github.com/Diegocortes15/selenium-automation-framework-saucedemo.git
+git clone https://github.com/Diegocortes15/itsense-qa-assessment.git
 ```
 
 ![image](https://user-images.githubusercontent.com/60171460/215863587-4ee3772f-78ca-4320-ba45-50d281baec33.png)
 
-## Run project
+## Run project ⚠
 
 Open the project with the desired IDE, then run the following command.
 
+### Local ⚠
+
+To run the project locally you make sure that in ```App Class``` the ```PLATFORM``` variable must be set as ```local```
+then in folder project you can run the following command.
+
 ```bash
 mvn clean verify
+```
+
+### Remote ⚠
+
+To run the project remotely you make sure that in ```App Class``` the ```PLATFORM``` variable must be set as ```remote```
+then you must run the docker container with the following command
+
+```bash
+docker-compose -f docker/docker-compose.yml up
+```
+
+Then in another terminal you must use the following container to run our tests
+
+```bash
+mvn clean verify
+```
+
+Once our tests have finished you must run the following command to stop our docker container
+
+```bash
+docker-compose -f docker/docker-compose.yml down
 ```
 
 ## Open allure report
