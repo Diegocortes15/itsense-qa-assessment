@@ -57,7 +57,7 @@ Installed:
 2. Open gitbash, copy and paste the following command
 
 ```bash
-git clone https://github.com/Diegocortes15/selenium-automation-framework-saucedemo.git
+git clone https://github.com/Diegocortes15/itsense-qa-assessment.git
 ```
 
 ![image](https://user-images.githubusercontent.com/60171460/215863587-4ee3772f-78ca-4320-ba45-50d281baec33.png)
