@@ -31,14 +31,4 @@ public class HomePage extends BasePage {
     public void verifyHeaderScraped(String[] scrapedFile){
         ActionsFactory.verifyScrapedTextSaved(scrapedFile[0], scrapedFile[1]);
     }
-/*
-    @Step("🧪 Verify validation message: \"{0}\"")
-    public void verifyValidationMessage(String validationMessage) {
-        ActionsFactory.verifyText(errorMessage, validationMessage);
-    }
-
-    @Step("🧪 Verify URL:" + url)
-    public void verifyLoginURL() {
-        ActionsFactory.verifyURLToBe(this.url);
-    }*/
 }
