@@ -59,7 +59,7 @@ jobs:
           retention-days: 14
 
       - name: Upload Artifact - Logs
-          if: always()
+        if: always()
           uses: actions/upload-artifact@v3
           with:
             name: Logs
@@ -68,7 +68,7 @@ jobs:
             retention-days: 14
 
       - name: Upload Artifact - Specs Results
-          if: always()
+        if: always()
           uses: actions/upload-artifact@v3
           with:
             name: specsResults
