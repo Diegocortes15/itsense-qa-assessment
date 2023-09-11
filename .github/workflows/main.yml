@@ -49,16 +49,34 @@ jobs:
           source ~/.bashrc
           allure generate target/allure-results --clean
 
-      - name: Upload Artifacts - Allure Report - Logger - Specs Results
+      - name: Upload Artifact - Allure Report
         if: always()
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
-          name: test-artifacts
+          name: allureReport
           path: |
             allure-report
-            target/logger.log
-            target/specs
           retention-days: 14
+
+      - name: Upload Artifact - Logs
+          if: always()
+          uses: actions/upload-artifact@v3
+          with:
+            name: Logs
+            path: |
+              target/logger.log
+            retention-days: 14
+
+      - name: Upload Artifact - Specs Results
+          if: always()
+          uses: actions/upload-artifact@v3
+          with:
+            name: specsResults
+            path: |
+              allure-report
+              target/logger.log
+              target/specs
+            retention-days: 14
 
       - name: Publish Test Results
         uses: EnricoMi/publish-unit-test-result-action@v2
