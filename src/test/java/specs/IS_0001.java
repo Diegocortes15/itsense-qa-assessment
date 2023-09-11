@@ -12,7 +12,7 @@ public class IS_0001 extends BaseTest {
     @Test
     @Story(storyParent)
     @Description("Validate the 'Header' tag content")
-    @Severity(SeverityLevel.BLOCKER)
+    @Severity(SeverityLevel.NORMAL)
     public void is_0002() {
         String testCase = "is-0002";
         HomePage homePage = new HomePage(driver);

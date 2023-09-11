@@ -76,21 +76,6 @@ mvn clean verify
 ```
 
 ### Remote ⚠
-
-To run the project remotely you make sure that in ```App Class``` the ```PLATFORM``` variable must be set as ```remote```
-then you must run the docker container with the following command
-
-```bash
-docker-compose -f docker/docker-compose.yml up
-```
-
-Then in another terminal you must use the following container to run our tests
-
-```bash
-mvn clean verify
-```
-
-### Remote ⚠
 > **Note**
 > You need [Docker](https://docs.docker.com/get-docker/) installed on your machine to run the following commands!
 
