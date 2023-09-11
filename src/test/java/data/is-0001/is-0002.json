@@ -1,0 +1,6 @@
+{
+  "testCase": "IS-0002",
+  "testSummary": "Verify 'Header' tag content",
+  "testDescription": "Validate the 'Header' tag content will be saved",
+  "tags": "@regression @sprint1 @is-0001 @is-0002"
+}
