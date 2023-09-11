@@ -1,6 +1,6 @@
 # IT Sense QA Assessment
 
-This repository present the solution for a problem 2.
+This repository presents the solution to problem 2.
 
 *Problema 2: La anterior empresa de manufactura requiere implementar un proceso de QA por medio del web scraping con el fin de monitorear la información publicada en su página web.*
 
