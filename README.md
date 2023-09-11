@@ -1,5 +1,21 @@
 # IT Sense QA Assessment
 
+This repository present the solution for a problem 2.
+
+*Problema 2: La anterior empresa de manufactura requiere implementar un proceso de QA por medio del web scraping con el fin de monitorear la información publicada en su página web.*
+
+*Solución: Implementar un algoritmo en el lenguaje de programación de su preferencia que permita hacer una consulta get a cualquier página web publica de internet con el fin de imprimir su encabezado.*
+
+You can see the information scraped in the artifact 📦 specsResults or 📦 allureReport
+
+![image](https://github.com/Diegocortes15/itsense-qa-assessment/assets/60171460/26723b06-d3bb-4f90-9d63-572078c258af)
+
+![image](https://github.com/Diegocortes15/itsense-qa-assessment/assets/60171460/cdae4f7c-a0de-454f-84e2-2521adae8263)
+
+If you want to change the page to do web scraping to its header, go to ```App Class``` and change the ```BASE_URL```
+
+![image](https://github.com/Diegocortes15/itsense-qa-assessment/assets/60171460/7b4b7018-e9f0-4ddc-bf75-c289efe813ca)
+
 ## Dependencies used
 
 - Selenium 4
@@ -7,6 +23,11 @@
 - Log4J2
 - Allure
 - JsonSimple
+
+## Pattern design used
+
+- Page Object Model (Thinking in a scalable and dynamic web automation framework)
+- Factory (Applied in WebDriverFactory Class for create difference webdrives intances with the requested browser)
 
 ## Prerequisites to run the project
 
@@ -38,7 +59,6 @@ Installed:
 - Chrome
 - Firefox
 - Microsoft Edge
-
 
 ## Download and open project
 
@@ -115,3 +135,5 @@ In our Github Actions or Azure DevOps you can see some details where you can fin
 1. Allure Report (Remember open it with a server like [Live Server](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer))
 2. Specs (Here you can find the text scraped from the header tag)
 3. Logs (Information related with test execution)
+
+![image](https://github.com/Diegocortes15/itsense-qa-assessment/assets/60171460/63b91417-2432-44c3-a3f8-4fd940028fc3)
